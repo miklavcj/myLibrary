@@ -1,81 +1,106 @@
 body {
-    margin: 0;
- 
+  margin: 0;
 }
-
-
 
 #mainContainer {
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
+h1 {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.switch {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.card .card-content {
+  padding: 12px 24px;
+}
+.card .card-action {
+  padding-bottom: 0;
+}
 #bookInput {
-    display: none;
-    width: 40%;
-    background-color:  #6c7860;
-    color: black;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
-    padding: 1rem;
-    margin: 0 auto;
-	margin-top: 30px;
-		
+  display: none;
 }
+
+/* label color */
+.input-field label {
+  color: #fff;
+}
+/* label focus color */
+.input-field input[type="text"]:focus + label {
+  color: #fff;
+}
+.input-field input[type="text"].valid:focus + label {
+  color: #26a69a;
+}
+
+.input-field input[type="number"]:focus + label {
+  color: #fff;
+}
+.input-field input[type="number"].valid:focus + label {
+  color: #26a69a;
+}
+/* label underline focus color */
+.input-field input[type="text"]:focus {
+  color: #fff;
+  border-bottom: 1px solid #4db6ac;
+  box-shadow: 0 1px 0 0 #4db6ac;
+}
+
+.input-field input[type="text"].valid:focus {
+  color: #fff;
+  border-bottom: 1px solid #26a69a;
+  box-shadow: 0 1px 0 0 #26a69a;
+}
+
+.input-field input[type="number"]:focus {
+  color: #fff;
+  border-bottom: 1px solid #4db6ac;
+  box-shadow: 0 1px 0 0 #4db6ac;
+}
+.input-field input[type="number"].valid:focus {
+  color: #fff;
+  border-bottom: 1px solid #26a69a;
+  box-shadow: 0 1px 0 0 #26a69a;
+}
+
+/* valid color */
+.input-field input[type="text"].valid {
+  color: #fff;
+  border-bottom: 1px solid #4db6ac;
+  box-shadow: 0 1px 0 0 #4db6ac;
+}
+
+.input-field input[type="number"].valid {
+  color: #fff;
+  border-bottom: 1px solid #4db6ac;
+  box-shadow: 0 1px 0 0 #4db6ac;
+}
+
+/* invalid color */
+.input-field input[type="text"].invalid {
+  border-bottom: 1px solid#ef5350;
+  box-shadow: 0 1px 0 0#ef5350;
+}
+*/ .input-field input[type="number"].invalid {
+  border-bottom: 1px solid#ef5350;
+  box-shadow: 0 1px 0 0#ef5350;
+}
+*/
   
-#bookForm {
-    display: flex;
-    flex-direction: column;
-		justify-content: space-between;
-    width: 90%;
-    margin: 0 auto;
-		
+     /* icon prefix focus color */
+     .input-field .prefix.active {
+  color: #fff;
 }
-
-#inputButtons {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.input {
-    margin: .5em 0;
-    padding: .5em;
-    padding-left: 1em;
-    border: none;
-    border-radius: 15px;
-}
-
-.checkboxDiv {
-    margin: .75em 0;
-}
-
-#shelf {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-	grid-gap: 1em
-}
-
-.book {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #6c7860;
-    color: black;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
-    padding: 1rem;
-}
-
-button {
-    border: none;
-    background-color:#aeb6a6;
-    color: black;
-    text-align: center;
-    border-radius: 15px;
-    padding: 0.5rem 1rem;
-}
-

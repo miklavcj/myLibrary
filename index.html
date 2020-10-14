@@ -1,32 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Library</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-      <div id="mainContainer">
-          <h1>My Library</h1>
-          <button id="addBook" type="button">Add a book</button>
-          <div id="bookInput">
-              <form id="bookForm" action="#">
-                  <h2>Add a book</h2>
-                  <input class="input" type="text" id="title" placeholder="Title"   autocomplete="off">
-                  <input class="input" type="text" id="author" placeholder="Author" autocomplete="off">
-                  <input class="input" type="number" id="pages" placeholder="Number of pages" autocomplete="off">
-                  <div class="checkboxDiv"><label for="read">Have read:</label>
-                  <input type="checkbox" id="read" >
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Library</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="container" class="container">
+    <h1>My Library</h1>
+    <div class="row center">
+      <button id="addBook" type="button" class="waves-effect waves-light btn ">Add a
+        book</button>
+    </div>
+
+    <div id="bookInput" class="row">
+      <div class="col s12 m8 l6  offset-m2 offset-l3">
+        <div class="card blue-grey darken-1 ">
+          <div class="card-content white-text">
+            <form id="bookForm" action="#" class="input-field white-text">
+              <h3>Add a book</h3>
+
+
+              <div class="input-field col s12 no-padding">
+                <input id="title" type="text" class="validate" autocomplete="off">
+                <label for="title">Title</label>
+              </div>
+              <div class="input-field col s12 no-padding">
+                <input id="author" type="text" class="validate" autocomplete="off">
+                <label for="author">Author</label>
+              </div>
+              <div class="input-field col s12 no-padding">
+                <input id="pages" type="number" class="validate" autocomplete="off">
+                <label for="pages">Number of pages</label>
+              </div>
+              <div class="switch">
+                <label>
+                  Not Read
+                  <input type="checkbox" id="read">
+                  <span class="lever"></span>
+                  Read
+                </label>
+              </div>
+              <div class="card-action row no-margin-bottom">
+                <div id="inputButtons" class="row center">
+                  <button id="submit" type="button" class="waves-effect waves-light btn col s3 offset-s2">Add</button>
+                  <button id="clear" type="button"
+                    class="waves-effect waves-light btn-flat col teal-text text-lighten-4 s3 offset-s2">Close</button>
                 </div>
-                 <div id="inputButtons">
-                  <button id="submit" type="button">Add</button>
-                  <button id="clear" type="button">Close</button>
-                </div>
-              </form>
+
+              </div>
+            </form>
           </div>
-					<div id="shelf"></div>
+        </div>
       </div>
-    <script src="script.js"></script>
-  </body>
+    </div>
+    <div id="shelf" class="row"></div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
 </html>
